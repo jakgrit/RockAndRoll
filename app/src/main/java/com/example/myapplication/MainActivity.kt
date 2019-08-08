@@ -19,8 +19,14 @@ class MainActivity : AppCompatActivity() {
         diceImage = findViewById(R.id.dice_image)
 
         var rollButton: Button = findViewById(R.id.roll_button)
+        var resetButton: Button = findViewById(R.id.reset_button)
 
         rollButton.setOnClickListener { rollDice() }
+        resetButton.setOnClickListener { resetDice() }
+    }
+
+    private fun resetDice(){
+        diceImage.setImageResource(R.drawable.empty_dice)
     }
 
     private fun rollDice(){
